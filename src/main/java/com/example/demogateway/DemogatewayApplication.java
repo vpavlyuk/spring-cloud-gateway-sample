@@ -49,6 +49,8 @@ public class DemogatewayApplication {
 		return builder.routes()
 				.route("path_backend", r -> r.path("/v2/version")
 						.uri("http://localhost:38492/v2/version"))
+				.route("path_httpbin", r -> r.path("/get")
+						.uri("http://httpbin.org/get"))
 				.build();
 		//@formatter:on
 	}
